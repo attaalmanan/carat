@@ -1,0 +1,297 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:WIT-{MM}{DD}-{YY}-{#####} ",
+ "creation": "2024-01-10 01:59:56.107144",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "mobile_number",
+  "customer_group",
+  "column_break_tvkzh",
+  "currency",
+  "exchange_rate",
+  "column_break_bjxnr",
+  "amount",
+  "sectiondebit",
+  "debit",
+  "counted_section",
+  "quarter",
+  "column_break_vzoym",
+  "half",
+  "column_break_ozjde",
+  "one",
+  "column_break_9u1pn",
+  "five",
+  "column_break_qlxyx",
+  "ten",
+  "column_break_4jwyw",
+  "twenty",
+  "column_break_mv6vh",
+  "fifty",
+  "column_break_hfobe",
+  "hundred",
+  "column_break_8daf1",
+  "twohundred",
+  "column_break_axokf",
+  "fivehundred",
+  "transaction_information_section",
+  "created_by",
+  "journal_entry",
+  "closed_by",
+  "closing_journal_entry",
+  "amended_from",
+  "multi"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_tvkzh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_bjxnr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "default": "0",
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transaction_information_section",
+   "fieldtype": "Section Break",
+   "label": "Transaction Information"
+  },
+  {
+   "fetch_from": "customer.customer_group",
+   "fetch_if_empty": 1,
+   "fieldname": "customer_group",
+   "fieldtype": "Read Only",
+   "label": "Customer Group"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Withdraw",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "sectiondebit",
+   "fieldtype": "Section Break",
+   "label": "Please choose your preferred account :"
+  },
+  {
+   "fieldname": "debit",
+   "fieldtype": "Link",
+   "label": "debit",
+   "options": "Account",
+   "read_only_depends_on": "eval: doc.multi == false;"
+  },
+  {
+   "default": "0",
+   "fieldname": "multi",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "multi"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "By",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:doc.currency !=\"LYD\"",
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate"
+  },
+  {
+   "fieldname": "counted_section",
+   "fieldtype": "Section Break",
+   "label": "Counted"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.currency ==\"LYD\"",
+   "fieldname": "quarter",
+   "fieldtype": "Int",
+   "label": ".25"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.currency ==\"LYD\"",
+   "fieldname": "half",
+   "fieldtype": "Int",
+   "label": ".5"
+  },
+  {
+   "default": "0",
+   "fieldname": "one",
+   "fieldtype": "Int",
+   "label": "1"
+  },
+  {
+   "default": "0",
+   "fieldname": "five",
+   "fieldtype": "Int",
+   "label": "5"
+  },
+  {
+   "default": "0",
+   "fieldname": "ten",
+   "fieldtype": "Int",
+   "label": "10"
+  },
+  {
+   "default": "0",
+   "fieldname": "twenty",
+   "fieldtype": "Int",
+   "label": "20"
+  },
+  {
+   "default": "0",
+   "fieldname": "fifty",
+   "fieldtype": "Int",
+   "label": "50"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.currency ==\"EUR\" || doc.currency ==\"USD\"",
+   "fieldname": "hundred",
+   "fieldtype": "Int",
+   "label": "100"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.currency ==\"EUR\"",
+   "fieldname": "twohundred",
+   "fieldtype": "Int",
+   "label": "200"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.currency ==\"EUR\"",
+   "fieldname": "fivehundred",
+   "fieldtype": "Int",
+   "label": "500"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "closed_by",
+   "fieldtype": "Data",
+   "label": "closed_by",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "closing_journal_entry",
+   "fieldtype": "Link",
+   "label": "Closing Journal Entry",
+   "options": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vzoym",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ozjde",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9u1pn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qlxyx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4jwyw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mv6vh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hfobe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8daf1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_axokf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer.custom_mobile_number",
+   "fieldname": "mobile_number",
+   "fieldtype": "Read Only",
+   "label": "Mobile Number"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-04-02 19:46:26.831226",
+ "modified_by": "Administrator",
+ "module": "Carat",
+ "name": "Withdraw",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

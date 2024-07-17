@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-04 02:59:28.207564",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_type",
+  "second_client",
+  "currency",
+  "transaction_date",
+  "column_break_jcjc1",
+  "transaction_number",
+  "first_client",
+  "received_amount",
+  "deposited_amount",
+  "ds",
+  "total_amount",
+  "column_break_iilpy",
+  "5",
+  "column_break_6lv6m",
+  "10",
+  "column_break_bzxmi",
+  "20",
+  "column_break_nvw8m",
+  "50"
+ ],
+ "fields": [
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Data",
+   "label": "Transaction Type"
+  },
+  {
+   "fieldname": "second_client",
+   "fieldtype": "Data",
+   "label": "Second Client"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Data",
+   "label": "Transaction Date"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "column_break_jcjc1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transaction_number",
+   "fieldtype": "Data",
+   "label": "Transaction Number"
+  },
+  {
+   "fieldname": "first_client",
+   "fieldtype": "Data",
+   "label": "First Client"
+  },
+  {
+   "fieldname": "received_amount",
+   "fieldtype": "Data",
+   "label": "Received Amount"
+  },
+  {
+   "fieldname": "deposited_amount",
+   "fieldtype": "Data",
+   "label": "deposited Amount"
+  },
+  {
+   "fieldname": "5",
+   "fieldtype": "Int",
+   "label": "5"
+  },
+  {
+   "columns": 2,
+   "fieldname": "column_break_6lv6m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "10",
+   "fieldtype": "Int",
+   "label": "10"
+  },
+  {
+   "fieldname": "column_break_bzxmi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "20",
+   "fieldtype": "Int",
+   "label": "20"
+  },
+  {
+   "fieldname": "column_break_nvw8m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "50",
+   "fieldtype": "Int",
+   "label": "50"
+  },
+  {
+   "fieldname": "column_break_iilpy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ds",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-03-04 03:13:01.529724",
+ "modified_by": "Administrator",
+ "module": "Carat",
+ "name": "Financial Transaction",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

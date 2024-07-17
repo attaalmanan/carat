@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-09 23:50:40.255568",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "deposit",
+  "withdraw",
+  "transfer_settings"
+ ],
+ "fields": [
+  {
+   "fieldname": "deposit",
+   "fieldtype": "Table",
+   "label": "Deposit Settings",
+   "options": "Deposit Settings table"
+  },
+  {
+   "fieldname": "withdraw",
+   "fieldtype": "Table",
+   "label": "Withdraw Settings",
+   "options": "Withdraw Settings table"
+  },
+  {
+   "fieldname": "transfer_settings",
+   "fieldtype": "Table",
+   "label": "Transfer Settings",
+   "options": "Transfer Settings table"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-02-18 16:54:58.124849",
+ "modified_by": "Administrator",
+ "module": "Carat",
+ "name": "Carat Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

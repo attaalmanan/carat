@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-23 14:40:55.382782",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "currency",
+  "column_break_kyil4",
+  "customer_group",
+  "accounts_section",
+  "debit",
+  "column_break_0uuqv",
+  "credit",
+  "commission_section",
+  "commission_account",
+  "column_break_dzl79",
+  "commission_type",
+  "rate",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kyil4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer Group",
+   "options": "Customer Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "accounts_section",
+   "fieldtype": "Section Break",
+   "label": "Accounts"
+  },
+  {
+   "fieldname": "debit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Debit",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_0uuqv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "credit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Credit",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commission_section",
+   "fieldtype": "Section Break",
+   "label": "Commission"
+  },
+  {
+   "fieldname": "commission_account",
+   "fieldtype": "Link",
+   "label": "Commission Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dzl79",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_type",
+   "fieldtype": "Select",
+   "label": "Commission Type",
+   "options": "Amount\nRate",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.commission_type == \"Rate\"",
+   "fieldname": "rate",
+   "fieldtype": "Percent",
+   "label": "Rate%"
+  },
+  {
+   "depends_on": "eval:doc.commission_type == \"Amount\"",
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "label": "Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-23 14:40:55.382782",
+ "modified_by": "Administrator",
+ "module": "Carat",
+ "name": "Transfer Settings table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

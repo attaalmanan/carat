@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-11 16:36:05.414145",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "currency",
+  "column_break_vld9k",
+  "from_treasury",
+  "column_break_qmtrj",
+  "trading_treasury",
+  "column_break_8e42n",
+  "profit_loss_treasury",
+  "section_break_grna3",
+  "amount",
+  "column_break_5fpou",
+  "exchange_rate",
+  "column_break_chilw",
+  "total",
+  "column_break_adzfj",
+  "last_exchange_rate",
+  "column_break_wdgad",
+  "closing_differents_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vld9k",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qmtrj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8e42n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_treasury",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From Treasury",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trading_treasury",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trading Treasury",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5fpou",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Exchange Rate"
+  },
+  {
+   "fieldname": "column_break_chilw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total "
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "last_exchange_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Last Exchange Rate"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "closing_differents_amount",
+   "fieldtype": "Float",
+   "label": "Closing Differents amount "
+  },
+  {
+   "fieldname": "profit_loss_treasury",
+   "fieldtype": "Link",
+   "label": "Profit Loss Treasury",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_grna3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_adzfj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wdgad",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-23 21:35:30.986479",
+ "modified_by": "Administrator",
+ "module": "Carat",
+ "name": "Exchange Currency",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

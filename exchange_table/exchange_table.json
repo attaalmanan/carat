@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-10 00:35:41.481092",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "currency",
+  "column_break_ywsds",
+  "from_treasury",
+  "column_break_svogl",
+  "trading_treasury",
+  "column_break_opwpt",
+  "profit_loss_treasury"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_ywsds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_svogl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_treasury",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From Treasury",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trading_treasury",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trading Treasury",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_opwpt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "profit_loss_treasury",
+   "fieldtype": "Link",
+   "label": "Profit Loss Treasury",
+   "options": "Account",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-23 21:31:57.328594",
+ "modified_by": "Administrator",
+ "module": "Carat",
+ "name": "Exchange Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

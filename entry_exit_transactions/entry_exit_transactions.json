@@ -1,0 +1,209 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-11-07 02:18:45.696063",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "transection_ino_section",
+  "naming_series",
+  "transaction_type",
+  "customer",
+  "amount",
+  "column_break_tim6y",
+  "branch",
+  "currency",
+  "posting_date",
+  "accounting_information_section",
+  "commission_rate",
+  "debit",
+  "commission_account",
+  "column_break_rapba",
+  "commission",
+  "credit",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Branch",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Float",
+   "label": "Commission Rate"
+  },
+  {
+   "fieldname": "commission",
+   "fieldtype": "Currency",
+   "label": "Commission",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "debit",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Debit",
+   "options": "Account",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "credit",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Credit",
+   "options": "Account",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Entry Exit Transactions",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "EE-Trans-",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "column_break_tim6y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transection_ino_section",
+   "fieldtype": "Section Break",
+   "label": "Transection Inormation"
+  },
+  {
+   "fieldname": "accounting_information_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Information"
+  },
+  {
+   "fieldname": "column_break_rapba",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "default": "Entry",
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transaction Type",
+   "options": "Entry\nExit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commission_account",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Commission Account",
+   "options": "Account"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-06 11:40:03.830780",
+ "modified_by": "Administrator",
+ "module": "Carat",
+ "name": "Entry Exit Transactions",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Academics User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "customer"
+}

@@ -1,0 +1,159 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:OES-{MM}{DD}-{YY}-{#####} ",
+ "creation": "2024-02-03 02:00:47.759277",
+ "default_view": "List",
+ "description": " ",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "column_break_vg14e",
+  "closed",
+  "column_break_ofm1x",
+  "exchange_table",
+  "daily_trading_section",
+  "daily_trading",
+  "transaction_information_section",
+  "journal_entry",
+  "created_by",
+  "column_break_xne8p",
+  "closing_journal_entry",
+  "closed_by",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_ofm1x",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction_information_section",
+   "fieldtype": "Section Break",
+   "label": "Transaction Information"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Data",
+   "label": "Opening Journal Entry",
+   "no_copy": 1,
+   "options": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Open Exchange Session",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "By",
+   "no_copy": 1,
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "exchange_table",
+   "fieldtype": "Table",
+   "label": "Currency and Amount",
+   "options": "Exchange Currency"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "depends_on": "eval:doc.docstatus == 1",
+   "fieldname": "daily_trading_section",
+   "fieldtype": "Section Break",
+   "label": "Daily Trading"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "daily_trading",
+   "fieldtype": "Table",
+   "label": "daily trading",
+   "no_copy": 1,
+   "options": "Exchange Table For Opening"
+  },
+  {
+   "fieldname": "closing_journal_entry",
+   "fieldtype": "Data",
+   "label": "Closing Journal Entry",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "closed",
+   "fieldtype": "Check",
+   "label": "closed",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vg14e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "closed_by",
+   "fieldtype": "Data",
+   "label": "closed by",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xne8p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Read Only",
+   "label": "Employee Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-24 22:08:57.788739",
+ "modified_by": "Administrator",
+ "module": "Carat",
+ "name": "Open Exchange Session",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

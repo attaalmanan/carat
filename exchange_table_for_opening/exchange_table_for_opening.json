@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TRN-{MM}{DD}-{YY}-{#####} ",
+ "creation": "2024-02-19 00:38:14.583016",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "from_currency",
+  "from_amount",
+  "column_break_tvkzh",
+  "to_currency",
+  "exchange_rate",
+  "to_amount",
+  "processed"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "from_currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From Currency",
+   "options": "Currency"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "from_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "From Amount"
+  },
+  {
+   "fieldname": "column_break_tvkzh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "to_currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "To Currency",
+   "options": "Currency"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Exchange Rate"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "to_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "To Amount"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "processed",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "processed"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-05 04:51:49.936953",
+ "modified_by": "Administrator",
+ "module": "Carat",
+ "name": "Exchange Table For Opening",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
